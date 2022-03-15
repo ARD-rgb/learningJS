@@ -95,4 +95,3 @@ restaurantCopy.name = 'Ristorante Roma';
 console.log(restaurantCopy.name);
 console.log(restaurant.name);
 
-//TAKING REFERECNCE OF MATERIAL WHEN REQUIRED, NOT STUFFING EVERYTHING IN BRAIN
