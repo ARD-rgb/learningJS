@@ -1,0 +1,31 @@
+//MAP CONCEPTS
+
+//USING ANY TYPE OF VALUE AS KEY OR VALUE
+
+let map = new Map();
+map.set('1', 'str1');   // a string key
+map.set(1, 'num1');     // a numeric key
+map.set(true, 'bool1'); // a boolean key
+
+// remember the regular Object? it would convert keys to string
+// Map keeps the type, so these two are different:
+
+// console.log(map.get(true))
+
+//USING OBJECTS AS A KEY
+
+let john = {name : "John"};
+// for every user, let's store their visits count
+let visitsCountMap = new Map();
+
+// john is the key for the map
+visitsCountMap.set(john,123);
+// console.log(visitsCountMap.get(john))
+console.log(visitsCountMap.size)
+
+//Map iterations
+function logMapElements(value, key, map) {
+    console.log(`m[${key}] = ${value}`);
+  }
+
+  new Map([['foo', 3], ['bar', {}], ['baz', undefined]]).forEach(logMapElements)
