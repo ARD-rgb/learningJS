@@ -1,0 +1,65 @@
+'use strict';
+
+
+
+// Set
+
+/*
+STORING UNIQUE VALES
+SETS ARE ITERABLE
+ORDER IS IRRILIVANT
+*/
+
+
+const set1 = new Set([1,1,2,3,4,5,'text']);
+
+//GET SIZE
+// console.log(set1,set1.size);
+
+//DELETE ELEMENT
+// set1.delete('text')
+// set1.delete(4)
+// console.log(set1);
+
+//CHECK FOR ELEMENTS
+// console.log(set1.has(1))
+// console.log(set1.has(7))
+
+//DELETE ALL ELEMENTS IN SET
+// set1.clear()
+
+//LOOPING OVER SET SINCE THEY ARE ITERABLES
+for(const order of set1) console.log(order)
+
+// Using the Set object
+
+let mySet = new Set()
+
+//ADD ELEMENTS TO SET
+mySet.add(1)           // Set [ 1 ]
+mySet.add(5)           // Set [ 1, 5 ]
+mySet.add(5)           // Set [ 1, 5 ]
+mySet.add('some text') // Set [ 1, 5, 'some text' ]
+let o = {a: 1, b: 2}
+mySet.add(o)
+
+
+// console.log(mySet)
+
+//SPREAD OPERATOR WORKS ON ALL ITERABLES INCLUDIGN sets
+
+//Example
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+const staffUnique = new Set(staff);
+console.log(staffUnique)
+
+//TRANSFORMING A SET INTO ARRAY
+const staffUnique_ = [...new Set(staff)];
+// console.log(staffUnique_)
+
+//IF DO NOT WANT TO CREATE ARRAY BUT TO WANT TO KNOW EXACT IDEA OF NUMBER UNIQUE ELEMENTS IN SET.
+console.log(new Set (['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size)
+
+//SAME WORKS WITH STRINGS
+
+console.log(new Set('AshutosDhok').size);
